@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/duvany10/cypress-training#readme",
   "devDependencies": {
-    "cypress": "^9.6.0"
+    "cypress": "^9.6.0",
+    "typescript": "^4.6.4"
   }
 }
