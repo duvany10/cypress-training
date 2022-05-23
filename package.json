@@ -1,29 +1,36 @@
 {
-  "name": "cypress-training",
-  "version": "1.0.0",
-  "description": "This is a Workshop about Cypress",
-  "main": "index.js",
-  "scripts": {
-    "test:open": "cypress open"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/duvany10/cypress-training.git"
-  },
-  "keywords": [
-    "ui-testing",
-    "dojo",
-    "practice",
-    "cypress"
-  ],
-  "author": "Duvan Ganan duvany10@yahoo.es duvany10",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/duvany10/cypress-training/issues"
-  },
-  "homepage": "https://github.com/duvany10/cypress-training#readme",
-  "devDependencies": {
-    "cypress": "^9.6.0",
-    "typescript": "^4.6.4"
-  }
+    "name": "cypress-training",
+    "version": "1.0.0",
+    "description": "This is a Workshop about Cypress",
+    "main": "index.js",
+    "scripts": {
+        "test:open": "npm run lint && cypress open",
+        "lint": "eslint ./cypress/integration/**/*.ts",
+        "lint:fix": "npm run lint -- --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/duvany10/cypress-training.git"
+    },
+    "keywords": [
+        "ui-testing",
+        "dojo",
+        "practice",
+        "cypress"
+    ],
+    "author": "Duvan Ganan duvany10@yahoo.es duvany10",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/duvany10/cypress-training/issues"
+    },
+    "homepage": "https://github.com/duvany10/cypress-training#readme",
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.25.0",
+        "@typescript-eslint/parser": "^5.25.0",
+        "cypress": "^9.6.0",
+        "eslint": "^8.15.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-plugin-cypress": "^2.12.1",
+        "typescript": "^4.6.4"
+    }
 }
