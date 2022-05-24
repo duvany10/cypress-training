@@ -11,7 +11,7 @@
     },
     "include": [
         "cypress/**/*.ts"
-    ],
+, "cypress/page/index.js"    ],
     "exclude": [
         "node_modules/"
     ]
