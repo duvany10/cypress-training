@@ -25,7 +25,6 @@ describe("Buy a t-shirt", () => {
     shippingPage.chooseShippingOption();
     paymentPage.payByBankWire();
     paymentPage.confirmOrder();
-    cy.get(paymentPage.getConfirmationMessage())
-        .should("have.text", "Your order on My Store is complete.");
+    paymentPage.getConfirmationMessage().should("have.text", "Your order on My Store is complete.");
   });
 });

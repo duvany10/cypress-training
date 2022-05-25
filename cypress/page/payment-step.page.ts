@@ -18,8 +18,8 @@ class PaymentPage {
         cy.get(this.confirmButton).click();
     }
 
-    public getConfirmationMessage():string {
-        return this.confirmeMessage;
+    public getConfirmationMessage(): Cypress.Chainable<JQuery<HTMLElement>>{
+        return cy.get(this.confirmeMessage);
     }
 }
 
