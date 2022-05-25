@@ -10,9 +10,9 @@ class LoginPage {
         this.signInButton = "#SubmitLogin > span";
     }
 
-    public login() {
-        cy.get(this.emailField).type("aperdomobo@gmail.com");
-        cy.get(this.passwordField).type("WorkshopProtractor");
+    public login(email:string, pass:string) {
+        cy.get(this.emailField).type(email);
+        cy.get(this.passwordField).type(pass);
         cy.get(this.signInButton).click();
     }
 }

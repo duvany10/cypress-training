@@ -2,7 +2,7 @@ class PaymentPage {
 
     private payByBankWireButton: string;
     private confirmButton: string;
-    public confirmeMessage:string;
+    private confirmeMessage:string;
 
     constructor() {
         this.payByBankWireButton = ".bankwire";
@@ -16,6 +16,10 @@ class PaymentPage {
 
     public confirmOrder() {
         cy.get(this.confirmButton).click();
+    }
+
+    public getConfirmationMessage():string {
+        return this.confirmeMessage;
     }
 }
 
