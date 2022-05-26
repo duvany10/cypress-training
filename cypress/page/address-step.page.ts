@@ -3,7 +3,7 @@ class AddressPage {
     private processToCheckoutButton: string;
 
     constructor() {
-        this.processToCheckoutButton = '.cart_navigation > button[name="processAddress"] > span';
+        this.processToCheckoutButton = 'button[name="processAddress"]';
     }
 
     public processToCheckOut(): void {

@@ -7,7 +7,7 @@ class PaymentPage {
     constructor() {
         this.payByBankWireButton = ".bankwire";
         this.confirmButton = "#cart_navigation > .button > span";
-        this.confirmeMessage = "#center_column > .box > .cheque-indent > .dark";
+        this.confirmeMessage = "#center_column .cheque-indent strong";
     }
 
     public payByBankWire() {

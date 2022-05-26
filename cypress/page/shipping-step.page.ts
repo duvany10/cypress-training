@@ -5,7 +5,7 @@ class ShippingPage {
 
     constructor() {
         this.termOfServceCheck = "#cgv";
-        this.processToCheckoutButton = '.cart_navigation > button[name="processCarrier"] > span';
+        this.processToCheckoutButton = 'button[name="processCarrier"]';
     }
 
     public chooseShippingOption() {
