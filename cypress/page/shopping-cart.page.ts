@@ -3,7 +3,7 @@ class ShoppingCartPage {
     private processToCheckoutButton: string;
 
     constructor() {
-        this.processToCheckoutButton = ".cart_navigation > .button > span";
+        this.processToCheckoutButton = '.cart_navigation a[title="Proceed to checkout"]';
     }
 
     public processToCheckOut(): void {
