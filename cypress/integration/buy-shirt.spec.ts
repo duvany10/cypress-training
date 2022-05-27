@@ -16,8 +16,11 @@ const pass = "WorkshopProtractor";
 
 describe("Buy a t-shirt", () => {
   it("then the t-shirt should be bought", () => {
+    // Arrange
     menuContentPage.visitMenuContentPage();
     menuContentPage.goToTShirtMenu();
+
+    // Act
     productListPage.addTShirtToCart();
     shoppingCartPage.processToCheckOut();
     loginPage.login(email, pass);
@@ -25,6 +28,8 @@ describe("Buy a t-shirt", () => {
     shippingPage.chooseShippingOption();
     paymentPage.payByBankWire();
     paymentPage.confirmOrder();
+
+    // Assert
     paymentPage.getConfirmationMessage().should("have.text", "Your order on My Store is complete.");
   });
 });
