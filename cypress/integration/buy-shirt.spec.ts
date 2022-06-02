@@ -20,7 +20,6 @@ describe("Buy a t-shirt", () => {
     addressPage = new AddressPage();
     shippingPage = new ShippingPage();
     paymentPage = new PaymentPage();
-    
   });
   it("then the t-shirt should be bought", () => {
     // Arrange
