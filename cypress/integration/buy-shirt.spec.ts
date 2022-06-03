@@ -11,9 +11,6 @@ let addressPage: AddressPage;
 let shippingPage: ShippingPage;
 let paymentPage: PaymentPage;
 
-let email: string;
-let pass: string;
-
 describe("Buy a t-shirt", () => {
   before(() => {
     menuContentPage = new MenuContentPage();
@@ -23,16 +20,17 @@ describe("Buy a t-shirt", () => {
     addressPage = new AddressPage();
     shippingPage = new ShippingPage();
     paymentPage = new PaymentPage();
-    email = "aperdomobo@gmail.com";
-    pass = "WorkshopProtractor";
   });
   it("then the t-shirt should be bought", () => {
     // Arrange
+    const email = "aperdomobo@gmail.com";
+    const pass = "WorkshopProtractor";
+    const productName = "Faded Short Sleeve T-shirts";
     menuContentPage.visitMenuContentPage();
-    menuContentPage.goToTShirtMenu();
 
     // Act
-    productListPage.addTShirtToCart();
+    menuContentPage.goToTShirtMenu();
+    productListPage.addTShirtToCart(productName);
     shoppingCartPage.processToCheckOut();
     loginPage.login(email, pass);
     addressPage.processToCheckOut();
