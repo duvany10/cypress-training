@@ -38,7 +38,7 @@ class PersonalFormPage {
         cy.get(this.emailInput).type(personalInformation.email);
         cy.get(this.genderRadio).check("Male", { force: true });
         cy.get(this.mobileNumberInput).type(personalInformation.mobileNumber);
-        cy.get(this.hobbiesCheck).check(personalInformation.hobbies, { force: true });  
+        cy.get(this.hobbiesCheck).check(personalInformation.hobbies, { force: true });
         cy.get(this.currentAddressTextArea).type(personalInformation.currentAddress);
         cy.get(this.stateSelect).click({force:true});
         cy.get(this.NCROption).click();
