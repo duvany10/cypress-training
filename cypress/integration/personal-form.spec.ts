@@ -30,6 +30,7 @@ describe("Personal form page", () => {
         .should("contain.text", personalInformation.gender)
         .should("contain.text", personalInformation.mobileNumber)
         .should("contain.text", "Reading, Music")
-        .should("contain.text", personalInformation.currentAddress);
+        .should("contain.text", personalInformation.currentAddress)
+        .should("contain.text", "NCR Delhi");
   });
 });
