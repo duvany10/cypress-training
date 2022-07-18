@@ -9,8 +9,9 @@
         ],
         "types": [
             "cypress",
-            "node"
-        ]
+            "node",
+            "cypress-file-upload"
+        ],
     },
     "include": [
         "cypress/**/*.ts"
