@@ -1,12 +1,14 @@
 class UploadPage {
     private uploadDemoSiteUrl: string;
     private inputFile: string;
+    private uploadButton: string;
     private elementTittle: string;
 
     constructor() {
-        this.uploadDemoSiteUrl = 'http://demo.automationtesting.in/FileUpload.html';
-        this.inputFile = '#input-4';
-        this.elementTittle = '.file-footer-caption';
+        this.uploadDemoSiteUrl = 'https://the-internet.herokuapp.com/upload';
+        this.inputFile = '#file-upload';
+        this.uploadButton = '#file-submit';
+        this.elementTittle = '#uploaded-files';
     }
 
     visitUploadDemoSite(): void {
@@ -15,6 +17,7 @@ class UploadPage {
 
     uploadFile(fileName: string): void {
         cy.get(this.inputFile).attachFile(fileName);
+        cy.get(this.uploadButton).click();
     }
 
     getTittle() {
