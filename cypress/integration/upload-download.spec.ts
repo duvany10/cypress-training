@@ -1,4 +1,4 @@
-import { DownloadPage, UploadPage } from "../page";
+import {DownloadPage, UploadPage} from "../page";
 
 let uploadPage: UploadPage;
 let downloadPage: DownloadPage;
@@ -6,14 +6,14 @@ let downloadPage: DownloadPage;
 describe("Working with Files", () => {
   before(() => {
     uploadPage = new UploadPage();
-    downloadPage = new DownloadPage();    
+    downloadPage = new DownloadPage();
   });
   describe("Upload File", () => {
     it("Should have a Tittle", () => {
       // Arrange
       const fileName = "example.json";
 
-      // Act      
+      // Act
       uploadPage.visitUploadDemoSite();
       uploadPage.uploadFile(fileName);
 
@@ -25,7 +25,7 @@ describe("Working with Files", () => {
     it("Should be in the download cypress folder", () => {
       downloadPage.visitDownloadDemoSite();
       downloadPage.downloadFile();
-      downloadPage.getDownloadFile().should('exist');
-    })  
+      downloadPage.getDownloadFile().should("exist");
+    });
   });
 });
