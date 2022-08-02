@@ -14,7 +14,7 @@ class DownloadPage {
     }
 
     downloadFile(): void {
-        cy.get('#downloadButton').click();
+        cy.get(this.downloadButton).click();
     }
 
     getDownloadFile() {
